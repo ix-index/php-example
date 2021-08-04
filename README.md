@@ -1,7 +1,7 @@
 ## Introduction
 This example is using `cURL` (a built-in module in PHP) to connect to the API. Note that this example is for terminal use ONLY. It will NOT work in a browser.
 
-To start with `cURL`, we have to create a cURL instance.
+To start with `cURL`, we have to create a `cURL` instance.
 ```
 $curl = curl_init();
 ```
@@ -46,7 +46,7 @@ while(true)
 	$response = curl_exec($curl);
 	$data = json_decode($response, TRUE);
 	echo $data['data']['value'].PHP_EOL;
-	sleep(15);
+	sleep(15 - time() % 15);
 }
 
 curl_close($curl);
@@ -85,7 +85,7 @@ while(true)
 	$response = curl_exec($curl);
 	$data = json_decode($response, TRUE);
 	echo $data['data']['value'].PHP_EOL;
-	sleep(15);
+	sleep(15 - time() % 15);
 }
 
 curl_close($curl);
