@@ -24,7 +24,7 @@ while(true)
 	$response = curl_exec($curl);
 	$data = json_decode($response, TRUE);
 	echo $data['data']['value'].PHP_EOL;
-	sleep(15);
+	sleep(15 - time() % 15);
 }
 
 curl_close($curl);
