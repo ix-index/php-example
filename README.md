@@ -11,11 +11,11 @@ $curl = curl_init();
 To authenticate, we have to add our API token into the header of the `cURL` instance, so the server knows who we are.
 
 ```
-$url = '{{BASE_URL}}';
+$url = 'https://api.ix-index.com/v1';
 $api_token = '<your api token>';
 
 curl_setopt_array($curl, array(
-	CURLOPT_URL => $url.'/index/ixei',
+	CURLOPT_URL => $url.'/index/ixci',
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_ENCODING => '',
 	CURLOPT_MAXREDIRS => 10,
@@ -61,7 +61,7 @@ curl_close($curl);
 ```
 <?php
 
-$url = '{{BASE_URL}}';
+$url = 'https://api.ix-index.com/v1';
 $api_token = '<your api token>';
 
 $curl = curl_init();
