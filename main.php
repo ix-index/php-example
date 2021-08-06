@@ -6,7 +6,7 @@ $api_token = '<your api token>';
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-	CURLOPT_URL => $url.'/index/ixci',
+	CURLOPT_URL => $url.'/real-time/ixci',
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_ENCODING => '',
 	CURLOPT_MAXREDIRS => 10,
